@@ -1,21 +1,40 @@
 body{
   background-color: aqua;
+  margin:0;
 }
 .person_container{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin: auto;
   background:red;
   display:flex;
   flex-direction:row;
   height:500px;
-  width:100%;
+  width:70%;
   flex-wrap: wrap;
   justify-content: center;
   align-items:center;
   gap:10px;
+  border-radius:20px;
+  
 }
 .person_details{
+  text-align:center;
   background-color: white;
   border:1px solid black;
   height:150px;
   width:150px;
-  
+  border-radius: 20px;
+
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+.person_details:hover{
+  text-decoration: none;
+  background:gray;
 }

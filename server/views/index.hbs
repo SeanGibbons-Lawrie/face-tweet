@@ -1,11 +1,13 @@
 
   <div class = "person_container">
-
     
-      {{#each users}}
+    
+      {{#each groups}}
+      <a href="/group/{{id}}">
       <div class = "person_details">
-        <p>{{name}} ({{email}})</p> 
+       <p>{{name}}</p> 
       </div>
+      </a> 
       {{/each}}
    
      
