@@ -8,14 +8,23 @@ import userRoutes from './routes/users.js'
 
 const server = express()
 
-const __filename = URL.fileURLToPath(import.meta.url)
-const __dirname = Path.dirname(__filename)
+//const __filename = URL.fileURLToPath(import.meta.url)
+//const __dirname = Path.dirname(__filename)
 
 // Middleware
+// server.engine('hbs', handlebars.engine({ extname: 'hbs' }))
+// server.set('view engine', 'hbs')
+// server.set('views', Path.join(__dirname, 'views'))
+// server.use(express.urlencoded({ extended: true }))
+const publicFolder = Path.resolve('public')
+server.use(express.static(publicFolder))
+
+//--hbs config
+
 server.engine('hbs', handlebars.engine({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
-server.set('views', Path.join(__dirname, 'views'))
-server.use(express.urlencoded({ extended: true }))
+server.set('views',Path.resolve('server/views'))
+server.set(express.urlencoded({ extended: true }))
 
 // Routes
 server.use('/', userRoutes)

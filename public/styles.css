@@ -1,0 +1,21 @@
+body{
+  background-color: aqua;
+}
+.person_container{
+  background:red;
+  display:flex;
+  flex-direction:row;
+  height:500px;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  gap:10px;
+}
+.person_details{
+  background-color: white;
+  border:1px solid black;
+  height:150px;
+  width:150px;
+  
+}
