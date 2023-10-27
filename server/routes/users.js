@@ -17,12 +17,20 @@ router.get('/', async (req, res) => {
 })
 router.get('/group/:id', async (req, res) => {
   const id = req.params.id
-  const members = await db.getGroupMembers(id)
 
-  console.log(members)
-  res.render('group', { members: members })
+  const members= await db.getGroupMembers(id)
+ console.log({members:members})
+  res.render('group',{members:members})
+
 })
+router.get('/member/:id', async(req,res)=>{
+  const id = req.params.id
+
+  const member = await db.getMemberGroups(id) 
 
 
+  console.log({member:member})
+  res.render('member',{member:member})
+})
 
 export default router
