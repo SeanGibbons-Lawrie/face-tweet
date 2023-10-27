@@ -1,11 +1,13 @@
 
   <div class = "person_container">
-    
+
     
       {{#each groups}}
       <a href="/group/{{id}}">
       <div class = "person_details">
-       <p>{{name}}</p> 
+       <p>{{name}}</p>
+       <img style = "height:80px"src="/imgs/{{id}}.jpg" >
+       
       </div>
       </a> 
       {{/each}}
