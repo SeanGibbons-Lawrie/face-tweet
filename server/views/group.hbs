@@ -1,4 +1,18 @@
-{{#each members}}
-{{grouName}}<br>
-{{memberName}}
-{{/each}}
+<h1>{{#with (lookup members 0) as |firstMember|}}
+  {{firstMember.groupName}}
+{{/with}} group </h1>
+<div class = "person_container">
+
+
+
+    {{#each members}}
+    <a href="/member/{{id}}">
+    <div class = "person_details">
+
+      <p>{{memberName}} <br></p> 
+    </div></a>
+    
+
+    {{/each}}
+
+</div>
