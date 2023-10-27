@@ -1,5 +1,5 @@
 body{
-  background-color: aqua;
+  background-color: rgb(184, 228, 199);
   margin:0;
 }
 .person_container{
@@ -9,7 +9,7 @@ body{
   right:0;
   bottom:0;
   margin: auto;
-  background:red;
+  background:rgb(71, 92, 23);
   display:flex;
   flex-direction:row;
   height:500px;
@@ -19,6 +19,7 @@ body{
   align-items:center;
   gap:10px;
   border-radius:20px;
+  
   box-shadow: 5px 10px 20px black;
 }
 .person_details{
@@ -55,9 +56,7 @@ h1{
   text-align:center
 }
 .home_button{
-  position:absolute;
-  left:500px;
-  top:50px;
+  
   
 }
 .text{
