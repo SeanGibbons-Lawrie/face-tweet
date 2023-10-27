@@ -1,10 +1,19 @@
+<h1>{{#with (lookup member 0) as |firstMember|}}
+  {{firstMember.memberName}}'s
+{{/with}} Profile </h1>
+
 <div class = "person_container">
+    {{#each member}}
+     <div class = "person_details">
 
-  {{#each member}}
-   <div class = "person_details">
-  <p>{{name}}</p>
+         <p> {{groupName}}</p>
+     </div>
+     
+    
+  
+   
 
-  </div>
   {{/each}}
+
 
 </div>

@@ -32,3 +32,11 @@ export async function getGroupMembers(id) {
     .select('groups.name as groupName', 'members.name as memberName', 'members.id as id')
     .where('groups_id',id)
 }
+
+export async function getMemberGroups(id) {
+  return connection('members')
+    .join('groups-members', 'members.id', 'groups-members.members_id')
+    .join('groups', 'groups-members.groups_id', 'groups.id')
+    .select('groups.name as groupName', 'members.name as memberName', 'groups.id as id')
+    .where('members_id',id)
+}
