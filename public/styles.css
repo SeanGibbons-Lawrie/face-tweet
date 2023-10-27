@@ -19,16 +19,16 @@ body{
   align-items:center;
   gap:10px;
   border-radius:20px;
-  
+  box-shadow: 5px 10px 20px black;
 }
 .person_details{
   text-align:center;
   background-color: white;
   border:1px solid black;
-  height:150px;
-  width:150px;
+  height:250px;
+  width:250px;
   border-radius: 20px;
-
+  box-shadow: 5px 10px 20px black;
 }
 a{
   text-decoration: none;
@@ -36,7 +36,20 @@ a{
 }
 .person_details:hover{
   text-decoration: none;
-  background:gray;
+  animation-name: grayExpands;
+  animation-duration: 2s ;
+  animation-timing-function: infinite ease-in-out;
+}
+@keyframes grayExpands {
+  0%  {
+      background-color: white
+  }
+  50%{
+    background: grey;
+  }
+  100%{
+    background-color: white;
+  }
 }
 h1{
   text-align:center
@@ -45,4 +58,9 @@ h1{
   position:absolute;
   left:500px;
   top:50px;
+  
+}
+.text{
+  font-family: Lucida;
+  font-size:1.5em;
 }
